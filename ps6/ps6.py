@@ -231,8 +231,8 @@ class CiphertextMessage(Message):
             if count >= good_words:
                 best = test
                 good_words = count
-                best_shift = i
-        return 26-best_shift, best
+                best_shift = 26-i
+        return best_shift, best
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
